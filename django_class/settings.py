@@ -18,7 +18,8 @@ INSTALLED_APPS = [
 
     'rest_framework',
 
-    'apps.apps_james'
+    'apps.apps_james',
+    'apps.authentication'
 ]
 
 MIDDLEWARE = [
@@ -57,6 +58,8 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+AUTH_USER_MODEL = 'authentication.User'
 
 AUTH_PASSWORD_VALIDATORS = [
     {
